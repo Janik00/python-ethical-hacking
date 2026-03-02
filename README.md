@@ -23,8 +23,6 @@ Currently following: **"Learn Python & Ethical Hacking From Scratch"** by Zaid S
 **Adaptations made:**
 - Python 3.x compatibility (course uses Python 2)
 - Modern Linux utilities and best practices
-- Enhanced error handling and user experience
-- Additional input validation and security checks
 
 ## 📊 Progress
 
@@ -191,10 +189,6 @@ Feel free to open an issue or submit a pull request!
 **GitHub:** [@Janik00](https://github.com/Janik00)
 
 Questions, feedback, or collaboration opportunities welcome!
-
-## 📜 License
-
-Educational use only. Not licensed for commercial use.
 
 ---
 
