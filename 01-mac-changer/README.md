@@ -8,7 +8,7 @@ This tool allows you to spoof your network interface's MAC (Media Access Control
 
 **Version:** 1.0  
 **Python:** 3.x  
-**Platform:** Linux (Kali, Ubuntu, Debian)  
+**Platform:** Linux  
 **Status:** ✅ Functional | 🚧 v2 in planning
 
 ## 🎯 Purpose & Use Cases
@@ -58,46 +58,12 @@ ifconfig <interface> hw ether <mac_address>  # Change MAC
 ifconfig <interface> up                      # Enable interface
 ```
 
-## 📦 Requirements
-
-### System Requirements:
-- **Operating System:** Linux-based (Kali Linux, Ubuntu, Debian, etc.)
-- **Python Version:** 3.6 or higher
-- **Privileges:** Root/sudo access required
-- **Utilities:** `ifconfig` (net-tools package)
-
-### Python Dependencies:
-All dependencies are part of Python standard library:
-- `subprocess` - Process execution
-- `optparse` - Argument parsing
-- `re` - Regular expressions
-
-No external packages required! ✅
-
-### Check Your System:
-```bash
-# Verify Python 3 is installed
-python3 --version
-
-# Verify ifconfig is available
-which ifconfig
-
-# If ifconfig is missing, install net-tools:
-sudo apt-get install net-tools
-```
-
 ## 🚀 Installation
 
 ### Step 1: Clone the Repository
 ```bash
 git clone https://github.com/Janik00/python-ethical-hacking.git
 cd python-ethical-hacking/01-mac-changer
-```
-
-### Step 2: Verify Files
-```bash
-ls -la
-# You should see: mac_changer.py and README.md
 ```
 
 ### Step 3: Make Script Executable (Optional)
@@ -143,7 +109,7 @@ ip link show
 
 ### Example 1: Basic MAC Change
 ```bash
-$ sudo python3 mac_changer.py -i eth0 -m 00:11:22:33:44:55
+$ sudo python mac_changer.py -i eth0 -m 00:11:22:33:44:55
 
 Current MAC address = aa:bb:cc:dd:ee:ff
 [+] Changing interface for eth0 to 00:11:22:33:44:55
@@ -220,27 +186,6 @@ Building this tool taught me:
 - **Privilege escalation** - When and why sudo is required
 - **Network stack** - How interface state affects connectivity
 - **System commands** - Integration between Python and shell utilities
-
-## ⚠️ Important Warnings
-
-### Legal Disclaimer:
-**FOR EDUCATIONAL AND AUTHORIZED TESTING ONLY**
-
-- ✅ **DO:** Use on your own devices and networks
-- ✅ **DO:** Use in authorized penetration testing engagements
-- ✅ **DO:** Use in isolated lab/VM environments
-- ❌ **DON'T:** Use on networks without permission
-- ❌ **DON'T:** Use to bypass security on public networks
-- ❌ **DON'T:** Use for any illegal activities
-
-**Unauthorized network access is illegal.** I am not responsible for misuse of this tool.
-
-### Technical Limitations:
-- **Requires root** - Won't work without sudo/root privileges
-- **Interface disruption** - Network connection will drop briefly during change
-- **Driver support** - Some network drivers don't support MAC spoofing
-- **Detection** - Advanced networks may detect MAC changes
-- **Persistence** - MAC reverts to original after reboot (not permanent)
 
 ## 🐛 Known Issues
 
@@ -385,22 +330,16 @@ Found a bug? Have a suggestion? Contributions welcome!
 
 ## 📧 Contact
 
-**Author:** Janik  
+**Author:** J
 **GitHub:** [@Janik00](https://github.com/Janik00)  
 **Repository:** [python-ethical-hacking](https://github.com/Janik00/python-ethical-hacking)
 
 Questions, feedback, or collaboration welcome!
 
-## 📝 License
-
-Educational use only. Not licensed for commercial use.
-
 ## 🙏 Acknowledgments
 
 - **Zaid Sabih** - Course instructor (Zsecurity)
 - **Python Community** - Documentation and resources
-- **Kali Linux Team** - Security testing platform
-- **Open Source Contributors** - Tools and libraries used
 
 ---
 
